@@ -1,0 +1,228 @@
+/* font */
+
+@font-face {
+    font-family: NotoSansTC-Regular;
+    src: url(../font/NotoSansTC-Regular.otf) format("opentype");
+    font-family: NotoSansTC-Medium;
+    src: url(../font/NotoSansTC-Medium.otf) format("opentype");
+    font-family: NotoSansTC-Bold;
+    src: url(../font/NotoSansTC-Bold.otf) format("opentype");
+}
+@font-face {
+    font-family: Roboto-BlackItalic;
+    src: url(../font/Roboto-BlackItalic.ttf) format("truetype");
+}
+
+/* all style */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'NotoSansTC-Regular', sans-serif;
+    line-height: 1.5;
+}
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+.d-flex {
+    display: flex;
+}
+
+/* header style */
+
+.header {
+    background: #AA0601;
+}
+.nav-bar {
+    justify-content: space-between;
+}
+.header .nav-bar ul li {
+    margin: 25px 0 25px 64px;
+    font-size: 20px;
+}
+.header .nav-bar ul a {
+    text-decoration: none;
+    color: #fff;
+}
+.header h1 {
+    margin: 16px 0 15.43px;
+}
+.header h1 a {
+    background-image: url(../images/logo-white.png);
+    background-size: cover;
+    width: 80px;
+    height: 48.57px;
+    display: block;
+    text-indent:101%; /* 首行縮排 */
+    overflow:hidden; /* 自動隱藏超出的文字或圖片 */
+    white-space:nowrap; /* 希望元素在第一排上面，沒有斷行 */
+}
+.header .nav-bar ul a:hover {
+    text-decoration: underline;
+}
+
+
+/* footer style */
+
+.footer {
+    background: #AA0601;
+    padding-top: 48px;
+}
+.footer-link {
+    justify-content: space-between;
+    margin-bottom: 33px;
+    border-bottom: 1px solid #fff;
+
+}
+.footer-link .nav {
+    justify-content: space-between;
+    font-size: 16px;
+}
+.footer-link .nav li {
+    padding: 12px 0;
+    margin-right: 48px;
+}
+.footer-link .nav a, .copyright a {
+    text-decoration: none;
+    color: #fff;
+}
+.footer-link .nav a:hover, .copyright a:hover {
+    text-decoration: underline;
+}
+
+.footer-link .social {
+    justify-content: space-between;
+    width: 176px;
+}
+.footer-link .social img {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+}
+.footer-link .social img:hover {
+    transform: scale(1.1);
+}
+
+.footer .contact {
+    padding-bottom: 32px;
+}
+.footer .contact a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 36px;
+}
+.footer .contact a:hover {
+    text-decoration: underline;
+}
+.material-icons-outlined {
+    display: inline-block;
+    font-size: 36px;
+    margin-right: 22px;
+}
+.footer .copyright {
+    justify-content: space-between;
+    padding: 32px 0;
+    color: #fff;
+    font-size: 16px;
+}
+.footer .copyright li {
+    margin-left: 48px;
+}
+
+
+/* max-width 992px */
+
+@media(max-width:992px) {
+    .header {
+        padding: 0 36px;
+    }
+}
+
+@media(max-width:992px) {
+    .footer {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+    .footer-link .social {
+        width: 152px;
+    }
+    .footer-link .social img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* max-width 375px */
+
+@media(max-width:767px) {
+    .header {
+        width: 100%;
+        padding: 0;
+    }
+    .nav-bar {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .header h1 {
+        margin: 0 auto;
+        margin-top: 16px;
+        margin-bottom: 15.43px;
+    }
+    .nav-bar ul {
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .header .nav-bar ul li {
+        width: 50%;
+        padding: 12px 0;
+        margin: 0;
+        text-align: center;
+        border: 1px solid #fff;
+    }
+}
+
+@media(max-width:767px) {
+    .footer {
+        padding: 24px 14px;
+    }
+    .footer-link {
+        margin-bottom: 16px;
+    }
+    .footer .nav {
+        display: none;
+    }
+    .footer .contact {
+        padding-bottom: 24px;
+    }
+    .footer .contact a {
+        font-size: 16px;
+    }
+    .footer .social {
+        width: 88px;
+    }
+    .footer .social img {
+        width: 24px;
+        height: 24px;
+    }
+    .material-icons-outlined {
+        font-size: 16px;
+        margin: 0;
+    }
+    .footer .copyright {
+        padding: 0;
+        flex-direction: column;
+    }
+    .footer .copyright .link {
+        flex-direction: column;
+    }
+    .footer .copyright li {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+}
